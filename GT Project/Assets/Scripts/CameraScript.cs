@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+	public float speed;
+	Transform playerPos;
+
 	void Update () {
-		
+		playerPos = GameObject.FindGameObjectWithTag ("Player").transform;
+
+		transform.position = Vector3.Lerp (transform.position, new Vector3 (playerPos.position.x, 
+			playerPos.position.y, -10), speed);
 	}
 }
