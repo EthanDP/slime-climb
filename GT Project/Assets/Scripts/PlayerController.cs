@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	public float jumpForceY;
+	public float gravityScale;
 	public float jumpForceX;
+	public float jumpForceY;
 	public int maxJumpCount;
-
 	[SerializeField]
 	int jumpCount;
 
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 			end = Input.mousePosition;
 			jumpCount--;
 			Vector2 jumpDirection = (end - start);
+			rb2d.velocity = Vector2.zero;
 			rb2d.AddForce (Vector2.Scale(jumpDirection.normalized, jumpForce));
 		}
 	}
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour {
 		// Disable gravity when in contact with a wall, may want to add tags later so it doesn't stick to enemies
 		jumpCount = maxJumpCount;
 		rb2d.gravityScale = 0.05f;
+
 	}
 
 	void OnCollisionStay2D (Collision2D coll) {
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour {
 
 	void OnCollisionExit2D (Collision2D coll) {
 		// Resets gravity value when no longer touching an object
-		rb2d.gravityScale = 1.0f;
+		jumpCount--;
+		rb2d.gravityScale = gravityScale;
 	}
 }

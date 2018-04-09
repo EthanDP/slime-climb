@@ -7,10 +7,9 @@ public class CameraScript : MonoBehaviour {
 	public float speed;
 	Transform playerPos;
 
-	void Update () {
+	void LateUpdate () {
 		playerPos = GameObject.FindGameObjectWithTag ("Player").transform;
 
-		transform.position = Vector3.Lerp (transform.position, new Vector3 (playerPos.position.x, 
-			playerPos.position.y, -10), speed);
+		transform.position = Vector3.Lerp (transform.position, new Vector3 (0, playerPos.position.y, -10), speed);
 	}
 }
