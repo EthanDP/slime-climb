@@ -19,11 +19,11 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		jumpCount = maxJumpCount;
-		jumpForce = new Vector2 (jumpForceX, jumpForceY);
-
 	}
 
 	void Update () {
+		jumpForce = new Vector2 (jumpForceX, jumpForceY);
+
 		if (Input.GetMouseButtonDown (0)) {
 			start = Input.mousePosition;
 		}
