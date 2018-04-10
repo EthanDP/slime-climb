@@ -5,9 +5,11 @@ using UnityEngine;
 public class LavaController : MonoBehaviour {
 
 	public GameObject player;
+	public GameObject cam;
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
+		cam = GameObject.FindGameObjectWithTag ("MainCamera");
 	}
 
 	void Update () {
@@ -15,6 +17,8 @@ public class LavaController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D coll) {
+		cam.GetComponent<CameraScript> ().playerAlive = false;
 		Destroy (player);
+
 	}
 }
