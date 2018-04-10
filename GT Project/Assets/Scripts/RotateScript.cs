@@ -6,19 +6,15 @@ public class RotateScript : MonoBehaviour {
 
 	bool hasRotated = false;
 
-	// Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}
 
 	void OnCollisionEnter2D (Collision2D coll) {
-
-
 
 		RaycastHit2D hit;
 		//Spits a raycast left, right and down, rotates to be perpendicular the ray hits the object colliding with

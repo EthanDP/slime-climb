@@ -14,7 +14,7 @@ public class PowerUp : MonoBehaviour {
 		if (gameObject.tag == "BounceUp" && coll.tag == "Player") {  // Checks to see what type of power up the player triggered.
 			player.GetComponent<PlayerController>().jumpForceY += 100;
 			player.GetComponent<PlayerController> ().jumpForceX += 100;
-			player.GetComponent<BoxCollider2D>().sharedMaterial.bounciness = 2;
+			player.GetComponent<BoxCollider2D>().sharedMaterial.bounciness = 1;
 		} else if (gameObject.tag == "FrictionUp") {
 			print ("More stuff here please");
 		}
