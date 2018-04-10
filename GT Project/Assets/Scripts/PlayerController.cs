@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		jumpCount = maxJumpCount;
+		GetComponent<BoxCollider2D> ().sharedMaterial.bounciness = 0;
 	}
 
 	void Update () {

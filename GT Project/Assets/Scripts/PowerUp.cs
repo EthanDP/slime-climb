@@ -11,10 +11,10 @@ public class PowerUp : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D coll) {
-		if (gameObject.tag == "BounceUp") {  // Checks to see what type of power up the player triggered.
+		if (gameObject.tag == "BounceUp" && coll.tag == "Player") {  // Checks to see what type of power up the player triggered.
 			player.GetComponent<PlayerController>().jumpForceY += 100;
 			player.GetComponent<PlayerController> ().jumpForceX += 100;
-			player.GetComponent<BoxCollider2D>().sharedMaterial.bounciness += 1;
+			player.GetComponent<BoxCollider2D>().sharedMaterial.bounciness = 2;
 		} else if (gameObject.tag == "FrictionUp") {
 			print ("More stuff here please");
 		}
