@@ -18,11 +18,10 @@ public class PowerUp : MonoBehaviour {
 			player.GetComponent<PlayerController>().jumpForceY += 200;
 			player.GetComponent<PlayerController> ().jumpForceX += 150;
 			player.GetComponent<BoxCollider2D> ().sharedMaterial = bounceMaterial;
-			//I moved this line into the if statement so that it wouldn't destroy the power-up if an enemy touches it
-			Destroy (gameObject);
 		} else if (gameObject.tag == "FrictionUp") {
 			print ("More stuff here please");
 		}
 
+		Destroy (gameObject);
 	}
 }

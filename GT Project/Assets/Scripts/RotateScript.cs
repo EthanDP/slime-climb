@@ -17,7 +17,6 @@ public class RotateScript : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D coll) {
 
 		RaycastHit2D hit;
-		try {
 		//Spits a raycast left, right and down, rotates to be perpendicular the ray hits the object colliding with
 		hit = Physics2D.Raycast (transform.position, Vector2.down);
 		if (hit.collider.gameObject.Equals (coll.gameObject) && !hasRotated) {
@@ -33,9 +32,7 @@ public class RotateScript : MonoBehaviour {
 		if (hit.collider.gameObject.Equals (coll.gameObject) && !hasRotated) {
 			transform.rotation = Quaternion.Euler (new Vector3 (0, 0, 90));
 		}
-		} catch {
 
-		}
 	}
 
 	void OnCollisionExit2D (Collision2D coll) {
