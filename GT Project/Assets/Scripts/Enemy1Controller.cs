@@ -12,14 +12,13 @@ public class Enemy1Controller : MonoBehaviour {
 	public float jumpForceX;
 	public float jumpForceY;
 
-	short dir = 1;
+	short dir = -1;
 
 	bool waiting = false;
 
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
-		cam = GameObject.FindGameObjectWithTag
 	}
 
 	void Update () {
@@ -48,6 +47,7 @@ public class Enemy1Controller : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other) {
 		//changes move direction when hitting a wall
 		dir *= -1;
+		Debug.Log ("TRIGGERED");
 	}
 
 	void Jump (float x, float y, float dir) {
