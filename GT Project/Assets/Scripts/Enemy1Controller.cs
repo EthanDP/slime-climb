@@ -19,7 +19,7 @@ public class Enemy1Controller : MonoBehaviour {
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
-		cam = GameObject.FindGameObjectWithTag
+		cam = GameObject.FindGameObjectWithTag ("MainCamera");
 	}
 
 	void Update () {
@@ -38,6 +38,7 @@ public class Enemy1Controller : MonoBehaviour {
 		//I think we're generally supposed to use Debug.Log to print to the console
 		Debug.Log ("Collided");
 		if (coll.gameObject.tag == "Player") {
+			cam.GetComponent<CameraScript> ().playerAlive = false;
 			Destroy (player);
 
 		} else if (Physics2D.Raycast (transform.position, Vector2.down).collider.gameObject.Equals (coll.gameObject)) {

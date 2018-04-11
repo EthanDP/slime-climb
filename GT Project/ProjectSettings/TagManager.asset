@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BounceUp
   - FrictionUp
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,7 @@ public class CameraScript : MonoBehaviour {
 
 	void LateUpdate () {
 		if (playerAlive == true) {
-			playerPos = GameObject.FindGameObjectWithTag ("Player").transform;
+			playerPos = GameObject.FindGameObjectWithTag("Player").transform;
 			transform.position = Vector3.Lerp (transform.position, new Vector3 (0, playerPos.position.y, -10), speed);
 		}
 	}
