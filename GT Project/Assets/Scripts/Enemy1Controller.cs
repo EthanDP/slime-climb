@@ -6,6 +6,7 @@ public class Enemy1Controller : MonoBehaviour {
 
 	Rigidbody2D rb2d;
 	GameObject player;
+	GameObject cam;
 
 	public float waitInterval;
 	public float jumpForceX;
@@ -18,6 +19,7 @@ public class Enemy1Controller : MonoBehaviour {
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
+		cam = GameObject.FindGameObjectWithTag
 	}
 
 	void Update () {
@@ -37,6 +39,7 @@ public class Enemy1Controller : MonoBehaviour {
 		Debug.Log ("Collided");
 		if (coll.gameObject.tag == "Player") {
 			Destroy (player);
+
 		} else if (Physics2D.Raycast (transform.position, Vector2.down).collider.gameObject.Equals (coll.gameObject)) {
 			waiting = false;
 		}
