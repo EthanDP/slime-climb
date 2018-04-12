@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class LavaController : MonoBehaviour {
 
-	public GameObject player;
-	public GameObject cam;
+	GameObject player;
+	GameObject cam;
+	GameObject deathHandler;
+
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		cam = GameObject.FindGameObjectWithTag ("MainCamera");
+		deathHandler = GameObject.FindGameObjectWithTag ("DeathEvent");
 	}
 
 	void Update () {
@@ -17,7 +20,8 @@ public class LavaController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D coll) {
-		cam.GetComponent<CameraScript> ().playerAlive = false;
-		Destroy (player);
+		if (coll.tag == "Player") {
+			deathHandler.GetComponent<DeathHandler> ().PlayerDeath ();
+		}
 	}
 }
