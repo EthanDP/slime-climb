@@ -19,6 +19,5 @@ public class LavaController : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D coll) {
 		cam.GetComponent<CameraScript> ().playerAlive = false;
 		Destroy (player);
-
 	}
 }
