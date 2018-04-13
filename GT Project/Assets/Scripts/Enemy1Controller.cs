@@ -5,8 +5,6 @@ using UnityEngine;
 public class Enemy1Controller : MonoBehaviour {
 
 	Rigidbody2D rb2d;
-	GameObject player;
-	GameObject cam;
 	GameObject deathHandler;
 
 	public float waitInterval;
@@ -19,8 +17,6 @@ public class Enemy1Controller : MonoBehaviour {
 
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
-		player = GameObject.FindGameObjectWithTag ("Player");
-		cam = GameObject.FindGameObjectWithTag ("MainCamera");
 		deathHandler = GameObject.FindGameObjectWithTag ("DeathEvent");
 	}
 

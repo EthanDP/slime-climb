@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - GameOver
   - DeathEvent
+  - BTower
   layers:
   - Default
   - TransparentFX

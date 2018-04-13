@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class LavaController : MonoBehaviour {
 
-	GameObject player;
-	GameObject cam;
 	GameObject deathHandler;
 
 
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player");
-		cam = GameObject.FindGameObjectWithTag ("MainCamera");
 		deathHandler = GameObject.FindGameObjectWithTag ("DeathEvent");
 	}
 
