@@ -31,5 +31,6 @@ public class TowerController : MonoBehaviour {
 	void createBullet () {
 		print ("Shoot");
 		Instantiate (bullet, transform.position + offset, transform.rotation);
+		waiting = false;
 	}
 }

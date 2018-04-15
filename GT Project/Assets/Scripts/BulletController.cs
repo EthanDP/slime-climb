@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour {
 
-	Rigidbody2D rb2d;
+	public float bulletSpeed;
+
+	GameObject deathHandler;
 
 	bool moveLeft;
 	bool testedDirection = false;
 
-	void Start () {
-
+	void Awake () {
+		deathHandler = GameObject.FindGameObjectWithTag ("DeathEvent");
 	}
 
 	void Update () {
@@ -33,9 +35,15 @@ public class BulletController : MonoBehaviour {
 
 	void Movement () { 
 		if (moveLeft = true) {
-			
+			transform.Translate(Vector3.left * bulletSpeed * Time.deltaTime);
 		} else if (moveLeft = false) {
-			
+			transform.Translate(Vector3.right * bulletSpeed * Time.deltaTime);
+		}
+	}
+
+	void OnTriggerEnter2D (Collider2D coll) {
+		if (coll.tag == "Player") {
+			deathHandler.GetComponent<DeathHandler> ().PlayerDeath();
 		}
 	}
 }
