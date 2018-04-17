@@ -8,7 +8,7 @@ public class BulletController : MonoBehaviour {
 
 	GameObject deathHandler;
 
-	bool moveLeft;
+	bool moveLeft = true;
 	bool testedDirection = false;
 
 	void Awake () {
