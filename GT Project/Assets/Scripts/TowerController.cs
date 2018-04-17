@@ -22,6 +22,10 @@ public class TowerController : MonoBehaviour {
 		}
 	}
 
+	void OnCollisionExit2D (Collision2D coll) {
+		waiting = false;
+	}
+
 	IEnumerator waitToShoot () {
 		waiting = true;
 		yield return new WaitForSeconds (3f);
