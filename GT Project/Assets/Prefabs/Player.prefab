@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212818041108405928}
   - component: {fileID: 61697975976312838}
   - component: {fileID: 50894323573760370}
+  - component: {fileID: 96863681266189260}
   - component: {fileID: 114576423183219236}
   - component: {fileID: 114548020350427056}
-  - component: {fileID: 96863681266189260}
+  - component: {fileID: 114879258513647416}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -214,8 +215,20 @@ MonoBehaviour:
   gravityScale: 1.5
   jumpForceX: 300
   jumpForceY: 400
-  maxJumpCount: 2
-  jumpCount: 2
+  maxJumpCount: 1
+  jumpCount: 1
+--- !u!114 &114879258513647416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1161815714389940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efb80877b37b82418377fc55c5a9021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  halfWidth: 1
 --- !u!212 &212818041108405928
 SpriteRenderer:
   m_ObjectHideFlags: 1
