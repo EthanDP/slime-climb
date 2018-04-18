@@ -19,7 +19,7 @@ public class BulletController : MonoBehaviour {
 		if (!testedDirection) {
 			RaycastHit2D hit;
 			hit = Physics2D.Raycast (transform.position, Vector2.right, 10);
-			if (hit.collider.gameObject.tag == "BTower") {
+			if (hit && hit.transform.gameObject.tag == "BTower") {
 				moveLeft = true;
 				print ("Hit tower");
 			} else {
@@ -34,9 +34,9 @@ public class BulletController : MonoBehaviour {
 	}
 
 	void Movement () { 
-		if (moveLeft = true) {
+		if (moveLeft) {
 			transform.Translate(Vector3.left * bulletSpeed * Time.deltaTime);
-		} else if (moveLeft = false) {
+		} else {
 			transform.Translate(Vector3.right * bulletSpeed * Time.deltaTime);
 		}
 	}

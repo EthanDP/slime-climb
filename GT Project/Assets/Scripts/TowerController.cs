@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerController : MonoBehaviour {
 
+	public float waitTime;
 	public Transform bullet;
 	public Vector3 offset = new Vector3(-.3f, .3f, 0);
 
@@ -28,7 +29,7 @@ public class TowerController : MonoBehaviour {
 
 	IEnumerator waitToShoot () {
 		waiting = true;
-		yield return new WaitForSeconds (3f);
+		yield return new WaitForSeconds (waitTime);
 		createBullet ();
 	}
 
