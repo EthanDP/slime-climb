@@ -143,4 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f862237fb1bfaf74d9296841b0eda778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 0}
+  gameOver: {fileID: 1699803000902252, guid: 777f3897012da5d46ad337256097ebea, type: 2}
+  particle: {fileID: 1077155145942704, guid: 154a60bc1de895b4dbae592d667a991a, type: 2}
+  deathNoise: {fileID: 1437566242109272, guid: 9f22954a3bd549c4c8eed7047660a658, type: 2}

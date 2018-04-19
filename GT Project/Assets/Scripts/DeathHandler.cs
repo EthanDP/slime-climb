@@ -6,6 +6,7 @@ public class DeathHandler : MonoBehaviour {
 
 	public GameObject gameOver;
 	public GameObject particle;
+	public GameObject deathNoise;
 
 	GameObject cam;
 	GameObject player;
@@ -21,6 +22,7 @@ public class DeathHandler : MonoBehaviour {
 		Vector2 playerPosition = player.transform.position;
 		Destroy (player);
 		Instantiate (particle, playerPosition, transform.rotation);
+		Instantiate (deathNoise);
 
 	}
 }

@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114576423183219236}
   - component: {fileID: 114548020350427056}
   - component: {fileID: 114879258513647416}
+  - component: {fileID: 114487948437920184}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -190,6 +191,19 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
+--- !u!114 &114487948437920184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1161815714389940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58d20605b5a19d448d72ae8b1ee20af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  land1: {fileID: 1246030553906168, guid: aa1df5d009cc1ff439462a8351488197, type: 2}
+  land2: {fileID: 1554145165942394, guid: fb3a7322208f86f45a022ab93dbe4eea, type: 2}
 --- !u!114 &114548020350427056
 MonoBehaviour:
   m_ObjectHideFlags: 1

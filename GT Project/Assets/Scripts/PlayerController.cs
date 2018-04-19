@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+
 	public float gravityScale;
 	public float jumpForceX;
 	public float jumpForceY;
@@ -55,4 +56,5 @@ public class PlayerController : MonoBehaviour {
 		jumpCount--;
 		rb2d.gravityScale = gravityScale;
 	}
+
 }
