@@ -1005,6 +1005,12 @@ Prefab:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1143974708}
+    - target: {fileID: 114926485687087470, guid: 91f3e547df55bff45bc48c22979a1278,
+        type: 2}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 1077155145942704, guid: 154a60bc1de895b4dbae592d667a991a,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91f3e547df55bff45bc48c22979a1278, type: 2}
   m_IsPrefabParent: 0
