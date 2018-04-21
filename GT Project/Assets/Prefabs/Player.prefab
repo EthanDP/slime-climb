@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityScale: 1.5
-  jumpForceX: 300
-  jumpForceY: 400
+  jumpForceX: 400
+  jumpForceY: 500
   maxJumpCount: 1
   jumpCount: 1
 --- !u!114 &114879258513647416
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7efb80877b37b82418377fc55c5a9021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  halfWidth: 1
+  halfWidth: 3.7
 --- !u!212 &212818041108405928
 SpriteRenderer:
   m_ObjectHideFlags: 1
