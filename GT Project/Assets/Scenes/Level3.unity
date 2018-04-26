@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathHandler: {fileID: 1216747585}
-  direction: 3
+  direction: 0
 --- !u!120 &216951665
 LineRenderer:
   m_ObjectHideFlags: 0
