@@ -371,18 +371,34 @@ Prefab:
     - target: {fileID: 114022825902973272, guid: 777f3897012da5d46ad337256097ebea,
         type: 2}
       propertyPath: m_fontColor.r
-      value: 1
+      value: 0.36764705
       objectReference: {fileID: 0}
     - target: {fileID: 114022825902973272, guid: 777f3897012da5d46ad337256097ebea,
         type: 2}
       propertyPath: m_fontColor.g
-      value: 0.5294118
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114022825902973272, guid: 777f3897012da5d46ad337256097ebea,
         type: 2}
       propertyPath: m_fontColor.b
-      value: 0.5294118
+      value: 0.529006
       objectReference: {fileID: 0}
+    - target: {fileID: 114022825902973272, guid: 777f3897012da5d46ad337256097ebea,
+        type: 2}
+      propertyPath: m_fontColor32.rgba
+      value: 4287037277
+      objectReference: {fileID: 0}
+    - target: {fileID: 114022825902973272, guid: 777f3897012da5d46ad337256097ebea,
+        type: 2}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 163292f6f226d954593d45b079f8aae0,
+        type: 2}
+    - target: {fileID: 114022825902973272, guid: 777f3897012da5d46ad337256097ebea,
+        type: 2}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140032, guid: 163292f6f226d954593d45b079f8aae0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 777f3897012da5d46ad337256097ebea, type: 2}
   m_IsPrefabParent: 0
