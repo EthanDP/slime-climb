@@ -3417,7 +3417,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 568f520ae88e7da439c45dcf2b9dd66d, type: 2}
+  - {fileID: 2100000, guid: c3186dfa24be1da489aa2746c5e5bafa, type: 2}
   - {fileID: 2100000, guid: 6fd836dcc2b96b746b49245bf38c8d28, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3451,7 +3451,7 @@ ParticleSystemRenderer:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
