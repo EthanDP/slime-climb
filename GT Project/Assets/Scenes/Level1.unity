@@ -749,7 +749,8 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 4b54971164c8416468a64e4afdd245a9, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 61026488358658142, guid: fb69d2025ea8e9c46bef9e24e9320c67, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: fb69d2025ea8e9c46bef9e24e9320c67, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &970909635 stripped
@@ -1785,7 +1786,8 @@ Prefab:
       propertyPath: jumpForceY
       value: 500
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 96863681266189260, guid: 44fd8b6bb2b6ffb44b40f2af0d9832ab, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 44fd8b6bb2b6ffb44b40f2af0d9832ab, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1775897718
