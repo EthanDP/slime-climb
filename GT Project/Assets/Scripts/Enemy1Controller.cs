@@ -37,7 +37,9 @@ public class Enemy1Controller : MonoBehaviour {
 		Debug.Log ("Collided");
 		if (coll.gameObject.tag == "Player") {
 			deathHandler.GetComponent<DeathHandler> ().PlayerDeath ();
-		} else if (Physics2D.Raycast (transform.position, Vector2.down).collider.gameObject.Equals (coll.gameObject)) {
+		} else if (Physics2D.Raycast (transform.position + new Vector3 (.225f, 0, 0), Vector2.down).collider.gameObject.Equals (coll.gameObject)) {
+			waiting = false;
+		} else if (Physics2D.Raycast (transform.position + new Vector3 (-.225f, 0, 0), Vector2.down).collider.gameObject.Equals (coll.gameObject)) {
 			waiting = false;
 		}
 	}

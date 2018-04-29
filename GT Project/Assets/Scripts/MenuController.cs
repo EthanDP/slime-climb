@@ -21,6 +21,10 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void LevelChoice () {
-		EditorSceneManager.LoadScene (EditorSceneManager.GetActiveScene().buildIndex + levelNumber);
+		if (PlayerPrefs.GetInt ("levelNum") >= EditorSceneManager.GetActiveScene ().buildIndex + levelNumber) {
+			EditorSceneManager.LoadScene (EditorSceneManager.GetActiveScene ().buildIndex + levelNumber);
+		} else {
+			print ("Not unlocked");
+		}
 	}
 }
