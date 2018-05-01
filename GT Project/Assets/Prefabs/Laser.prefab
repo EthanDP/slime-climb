@@ -137,7 +137,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: c21cf02ebee539b40977ec927fbfcd4c, type: 2}
+  - {fileID: 2100000, guid: c28691ede6cc1d94bade12861aa65d79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -162,43 +162,13 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 0.4
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.009856835
-        value: 0.532804
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.110780716
-        value: 0.38461494
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.25664914
-        value: 0.51357085
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.44460204
-        value: 0.3967648
-        inSlope: -0.4541874
-        outSlope: -0.4541874
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 0.726581
-        value: 0.493661
-        inSlope: 0.10281801
-        outSlope: 0.10281801
-        tangentMode: 0
-      - serializedVersion: 2
-        time: 1
-        value: 0.39244324
+        time: 0
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -237,7 +207,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
