@@ -7,7 +7,6 @@ using System.IO;
 public class DataController : MonoBehaviour {
 
 	void Start () {
-		DontDestroyOnLoad (gameObject);
 		PlayerPrefs.SetInt ("levelNum", PlayerPrefs.GetInt("levelNum"));
 
 		if (PlayerPrefs.GetInt ("levelNum") <= 1) {
@@ -19,5 +18,18 @@ public class DataController : MonoBehaviour {
 
 	void Update () {
 		
+	}
+
+	public void LevelComplete(int levelNumber) {
+		if (PlayerPrefs.GetInt("levelNum") == (levelNumber + 2)) {
+			PlayerPrefs.SetInt ("levelNum", levelNumber + 2);
+		}
+
+		StartCoroutine (loadNext(levelNumber));
+	}
+
+	IEnumerator loadNext(int levelNumber) {
+		yield return new WaitForSeconds (8f);
+		SceneManager.LoadScene (levelNumber + 2);
 	}
 }
