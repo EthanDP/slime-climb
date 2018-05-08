@@ -11,6 +11,7 @@ public class CloudScript : MonoBehaviour {
 
 	void Start () {
 		deathHandler = GameObject.FindGameObjectWithTag ("DeathEvent");
+		player = GameObject.FindGameObjectWithTag ("Player");
 	}
 
 	void Update () {
