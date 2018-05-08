@@ -8,6 +8,7 @@ public class DeathHandler : MonoBehaviour {
 	public GameObject particle;
 	public GameObject deathNoise;
 	public GameObject buttons;
+	public GameObject pauseButton;
 
 	GameObject cam;
 	GameObject player;
@@ -25,6 +26,6 @@ public class DeathHandler : MonoBehaviour {
 		Destroy (player);
 		Instantiate (particle, playerPosition, transform.rotation);
 		Instantiate (deathNoise);
-
+		pauseButton.SetActive (false);
 	}
 }

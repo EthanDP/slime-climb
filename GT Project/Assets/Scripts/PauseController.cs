@@ -5,13 +5,17 @@ using UnityEngine;
 public class PauseController : MonoBehaviour {
 
 	public GameObject buttons;
-	public GameObject paused;
+	public GameObject pauseButton;
 
-	void Start () {
-		
-	}
+	public void onClick () {
+		buttons.SetActive (true);
+		pauseButton.SetActive (false);
+		Time.timeScale = 0f;
+	} 
 
-	void Update () {
-		
+	public void onResume () {
+		buttons.SetActive (false);
+		pauseButton.SetActive (true);
+		Time.timeScale = 1.0f;
 	}
 }
