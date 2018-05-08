@@ -11,6 +11,8 @@ public class Enemy1Controller : MonoBehaviour {
 	public float jumpForceX;
 	public float jumpForceY;
 
+	float startTime;
+
 	short dir = 1;
 
 	bool waiting = false;
@@ -21,6 +23,10 @@ public class Enemy1Controller : MonoBehaviour {
 	}
 
 	void Update () {
+		if (Time.time - startTime > 5f && waiting) {
+			waiting = false;
+		}
+
 		if (!waiting) {
 			StartCoroutine(waitToJump ());
 		}
@@ -30,6 +36,14 @@ public class Enemy1Controller : MonoBehaviour {
 		waiting = true;
 		yield return new WaitForSeconds (waitInterval);
 		Jump (jumpForceX, jumpForceY, dir);
+
+		startTime = Time.time;
+
+		if (Random.Range (-1, 1) > 0) {
+			dir *= 1;
+		} else {
+			dir *= -1;
+		}
 	}
 
 	void OnCollisionEnter2D (Collision2D coll) {

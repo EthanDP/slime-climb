@@ -20,6 +20,14 @@ public class MenuController : MonoBehaviour {
 
 	}
 
+	public void resetLevel () {
+		EditorSceneManager.LoadScene (EditorSceneManager.GetActiveScene().buildIndex);
+	}
+
+	public void MenuChoice (int sceneNumber) {
+		EditorSceneManager.LoadScene (sceneNumber);
+	}
+
 	public void LevelChoice () {
 		if (PlayerPrefs.GetInt ("levelNum") >= EditorSceneManager.GetActiveScene ().buildIndex + levelNumber) {
 			EditorSceneManager.LoadScene (EditorSceneManager.GetActiveScene ().buildIndex + levelNumber);
