@@ -27,6 +27,7 @@ public class MenuController : MonoBehaviour {
 
 	public void MenuChoice (int sceneNumber) {
 		EditorSceneManager.LoadScene (sceneNumber);
+		Time.timeScale = 1.0f;
 	}
 
 	public void LevelChoice () {
