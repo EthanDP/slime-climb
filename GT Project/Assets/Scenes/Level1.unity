@@ -2582,28 +2582,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114879258513647416, guid: 44fd8b6bb2b6ffb44b40f2af0d9832ab,
-        type: 2}
-      propertyPath: halfWidth
-      value: 3.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 96863681266189260, guid: 44fd8b6bb2b6ffb44b40f2af0d9832ab,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114576423183219236, guid: 44fd8b6bb2b6ffb44b40f2af0d9832ab,
-        type: 2}
-      propertyPath: jumpForceX
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 114576423183219236, guid: 44fd8b6bb2b6ffb44b40f2af0d9832ab,
-        type: 2}
-      propertyPath: jumpForceY
-      value: 500
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 96863681266189260, guid: 44fd8b6bb2b6ffb44b40f2af0d9832ab, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44fd8b6bb2b6ffb44b40f2af0d9832ab, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1775897718
