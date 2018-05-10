@@ -790,6 +790,32 @@ Transform:
   m_PrefabParentObject: {fileID: 4913350156665054, guid: a2b0fcc030ce8c247b10f9686f8a510e,
     type: 2}
   m_PrefabInternal: {fileID: 261166026}
+--- !u!1 &598728175 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1699803000902252, guid: 777f3897012da5d46ad337256097ebea,
+    type: 2}
+  m_PrefabInternal: {fileID: 1387084445}
+--- !u!114 &598728177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 598728175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 512
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 640, y: 1300}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
 --- !u!1 &650673000 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1021901104076328, guid: 777f3897012da5d46ad337256097ebea,
@@ -2062,7 +2088,8 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: onClick
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114203851214209044, guid: 777f3897012da5d46ad337256097ebea, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 777f3897012da5d46ad337256097ebea, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1389515803

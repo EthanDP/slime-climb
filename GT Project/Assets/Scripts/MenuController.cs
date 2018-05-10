@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
 
 	public int levelNumber;
 
 	public void LevelSelect () {
-		EditorSceneManager.LoadScene (EditorSceneManager.GetActiveScene ().buildIndex + 1);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
 	}
 
 	public void OptionsMenu () {
@@ -21,18 +21,18 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void resetLevel () {
-		EditorSceneManager.LoadScene (EditorSceneManager.GetActiveScene().buildIndex);
+		SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex);
 		Time.timeScale = 1.0f;
 	}
 
 	public void MenuChoice (int sceneNumber) {
-		EditorSceneManager.LoadScene (sceneNumber);
+		SceneManager.LoadScene (sceneNumber);
 		Time.timeScale = 1.0f;
 	}
 
 	public void LevelChoice () {
-		if (PlayerPrefs.GetInt ("levelNum") >= EditorSceneManager.GetActiveScene ().buildIndex + levelNumber) {
-			EditorSceneManager.LoadScene (EditorSceneManager.GetActiveScene ().buildIndex + levelNumber);
+		if (PlayerPrefs.GetInt ("levelNum") >= SceneManager.GetActiveScene ().buildIndex + levelNumber) {
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + levelNumber);
 		} else {
 			print ("Not unlocked");
 		}

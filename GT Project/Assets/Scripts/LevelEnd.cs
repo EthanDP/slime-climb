@@ -10,8 +10,10 @@ public class LevelEnd : MonoBehaviour {
 	public int levelNumber;
 
 	void OnTriggerEnter2D (Collider2D coll) {
-		dataCont.GetComponent<DataController> ().LevelComplete (levelNumber);
-		victoryText.SetActive (true);
+		if (coll.tag == "Player") {
+			dataCont.GetComponent<DataController> ().LevelComplete (levelNumber);
+			victoryText.SetActive (true);
+		}
 	}
 		
 }

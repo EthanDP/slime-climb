@@ -315,6 +315,26 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: resetLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 114203851214209044, guid: 777f3897012da5d46ad337256097ebea,
+        type: 2}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203851214209044, guid: 777f3897012da5d46ad337256097ebea,
+        type: 2}
+      propertyPath: m_ReferenceResolution.x
+      value: 640
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203851214209044, guid: 777f3897012da5d46ad337256097ebea,
+        type: 2}
+      propertyPath: m_ReferenceResolution.y
+      value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203851214209044, guid: 777f3897012da5d46ad337256097ebea,
+        type: 2}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 777f3897012da5d46ad337256097ebea, type: 2}
   m_IsPrefabParent: 0

@@ -21,8 +21,9 @@ public class DataController : MonoBehaviour {
 	}
 
 	public void LevelComplete(int levelNumber) {
-		if (PlayerPrefs.GetInt("levelNum") == (levelNumber + 2)) {
+		if (PlayerPrefs.GetInt("levelNum") < (levelNumber + 2)) {
 			PlayerPrefs.SetInt ("levelNum", levelNumber + 2);
+			print ("Set level to: " + (levelNumber + 2));
 		}
 
 		StartCoroutine (loadNext(levelNumber));
