@@ -25,6 +25,7 @@ public class CloudScript : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D coll) {
 		if (isSpike && coll.gameObject.tag == "Player") {
 			deathHandler.GetComponent<DeathHandler> ().PlayerDeath ();
+			gameObject.GetComponent<BoxCollider2D> ().enabled = false;
 		}
 	}
 }
