@@ -8,8 +8,13 @@ public class TowerController : MonoBehaviour {
 	public Transform bullet;
 	public Vector3 offset = new Vector3(-.3f, .3f, 0);
 
+	GameObject fireSound;
+
 	bool waiting = false;
 
+	void Start () {
+		fireSound = GameObject.FindGameObjectWithTag ("FireNoise");
+	}
 
 	void Update () {
 		if (waiting == false) {
@@ -17,6 +22,7 @@ public class TowerController : MonoBehaviour {
 		}
 	}
 
+	/*
 	void OnCollisionStay2D (Collision2D coll) {
 		if (coll.gameObject.tag == "Player") {
 			waiting = true;  // Doesn't shoot if the player is touching the tower.
@@ -26,6 +32,7 @@ public class TowerController : MonoBehaviour {
 	void OnCollisionExit2D (Collision2D coll) {
 		waiting = false;
 	}
+	*/
 
 	IEnumerator waitToShoot () {
 		waiting = true;
@@ -34,6 +41,7 @@ public class TowerController : MonoBehaviour {
 	}
 
 	void createBullet () {
+		fireSound.GetComponent<AudioSource> ().Play ();
 		print ("Shoot");
 		Instantiate (bullet, transform.position + offset, transform.rotation);
 		waiting = false;

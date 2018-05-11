@@ -81,6 +81,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathHandler: {fileID: 0}
   direction: 3
+  laserMat: {fileID: 2100000, guid: c28691ede6cc1d94bade12861aa65d79, type: 2}
+  preLaserMat: {fileID: 2100000, guid: d261bc527a13c294c9608b73d5b8520e, type: 2}
+  laserFireNoise: {fileID: 8300000, guid: f70d04bc4eb117646abe40a5ad30542e, type: 3}
+  preLaserNoise: {fileID: 8300000, guid: ed63aad38d9f6064ebf73a2c6bc19623, type: 3}
+  laserNoise: {fileID: 0}
 --- !u!120 &120046510159196530
 LineRenderer:
   m_ObjectHideFlags: 1

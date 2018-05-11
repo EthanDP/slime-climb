@@ -7,12 +7,22 @@ public class LaserController : MonoBehaviour {
 	public GameObject deathHandler;
 	public int direction;  // 0 = left, 1 = up, 2 = right, 3 = down
 
+	public Material laserMat;
+	public Material preLaserMat;
+
+	public AudioClip laserFireNoise;
+	public AudioClip preLaserNoise;
+	public GameObject laserNoise;
+	AudioSource laserNoiseSource;
+
 	LineRenderer laser;
 	bool drawingLaser = false;
 
 	void Start () {
 		laser = GetComponent<LineRenderer> ();
 		laser.SetPosition (0, transform.position);
+		laserNoise = GameObject.FindGameObjectWithTag ("LaserNoise");
+		laserNoiseSource = laserNoise.GetComponent<AudioSource> ();
 
 		StartCoroutine (waitForLaser ());
 	}
@@ -20,10 +30,19 @@ public class LaserController : MonoBehaviour {
 	void Update () {
 
 		if (drawingLaser) {
-			drawLaser ();
+			drawLaser (true);
+			if (laserNoiseSource.clip != laserFireNoise) {
+				laserNoiseSource.clip = laserFireNoise;
+				laserNoiseSource.Play ();
+			}
 		} else {
-			laser.SetPosition (1, transform.position);
+			drawLaser (false);
 			StartCoroutine (waitForLaser ());
+			if (laserNoiseSource.clip != preLaserNoise) {
+				laserNoiseSource.clip = preLaserNoise;
+				laserNoiseSource.Play ();
+			}
+
 		}
 	}
 
@@ -35,9 +54,14 @@ public class LaserController : MonoBehaviour {
 		drawingLaser = false;
 	}
 
-	void drawLaser () {
+	void drawLaser (bool active) {
 		RaycastHit2D hit;
 		hit = Physics2D.Raycast (transform.position, Vector3.left, 50);
+		if (active) {
+			laser.material = laserMat;
+		} else {
+			laser.material = preLaserMat;
+		}
 
 		if (direction == 0) {
 			if (hit) {
@@ -68,7 +92,7 @@ public class LaserController : MonoBehaviour {
 			}
 		}
 
-		if (hit && hit.transform.gameObject.tag == "Player") {
+		if (hit && hit.transform.gameObject.tag == "Player" && active) {
 			print ("Hit player");
 			deathHandler.GetComponent<DeathHandler> ().PlayerDeath ();
 		} 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour {
 
 	public float bulletSpeed;
+	public float destroyTime = 5f;
 
 	GameObject deathHandler;
 
@@ -16,6 +17,11 @@ public class BulletController : MonoBehaviour {
 	}
 
 	void Update () {
+		destroyTime -= Time.deltaTime;
+		if (destroyTime <= 0f) {
+			Destroy (gameObject);
+		}
+
 		if (!testedDirection) {
 			RaycastHit2D hit;
 			hit = Physics2D.Raycast (transform.position, Vector2.right, 10);

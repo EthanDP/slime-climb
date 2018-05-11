@@ -11,6 +11,8 @@ TagManager:
   - DeathEvent
   - BTower
   - Danger
+  - FireNoise
+  - LaserNoise
   layers:
   - Default
   - TransparentFX
