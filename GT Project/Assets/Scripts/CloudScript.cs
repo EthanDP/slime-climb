@@ -12,14 +12,20 @@ public class CloudScript : MonoBehaviour {
 	void Start () {
 		deathHandler = GameObject.FindGameObjectWithTag ("DeathEvent");
 		player = GameObject.FindGameObjectWithTag ("Player");
+
+		if (isSpike) {
+			gameObject.GetComponent<BoxCollider2D> ().isTrigger = false;
+		}
 	}
 
 	void Update () {
-		if (player != null && player.transform.position.y - .055f >= transform.position.y) {
-			gameObject.GetComponent<BoxCollider2D> ().isTrigger = false;
-		} else {
-			gameObject.GetComponent<BoxCollider2D> ().isTrigger = true;
-		}
+		if (!isSpike) {
+			if (player != null && player.transform.position.y - .055f >= transform.position.y) {
+				gameObject.GetComponent<BoxCollider2D> ().isTrigger = false;
+			} else {
+				gameObject.GetComponent<BoxCollider2D> ().isTrigger = true;
+			}
+		} 
 	}
 
 	void OnCollisionEnter2D (Collision2D coll) {
