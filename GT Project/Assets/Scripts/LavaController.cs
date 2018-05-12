@@ -8,13 +8,15 @@ public class LavaController : MonoBehaviour {
 
 	bool isMoving = true;
 
+	public float moveSpeed = .3f;
+
 	void Start () {
 		deathHandler = GameObject.FindGameObjectWithTag ("DeathEvent");
 	}
 
 	void Update () {
 		if (isMoving) {
-			transform.Translate (0, .3f * Time.deltaTime, 0);	
+			transform.Translate (0, moveSpeed * Time.deltaTime, 0);	
 		}
 	}
 

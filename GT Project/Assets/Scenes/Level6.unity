@@ -2122,6 +2122,11 @@ Prefab:
       propertyPath: victoryText
       value: 
       objectReference: {fileID: 1738113914}
+    - target: {fileID: 114495211718486198, guid: cc9182a1ba197f04c88f088c8f214d62,
+        type: 2}
+      propertyPath: levelNumber
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cc9182a1ba197f04c88f088c8f214d62, type: 2}
   m_IsPrefabParent: 0

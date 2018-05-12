@@ -7,12 +7,11 @@ public class MenuController : MonoBehaviour {
 
 	public int levelNumber;
 
+	public GameObject menuElements;
+	public GameObject pauseElements;
+
 	public void LevelSelect () {
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex + 1);
-	}
-
-	public void OptionsMenu () {
-		
 	}
 
 	public void Quit () {
@@ -37,4 +36,19 @@ public class MenuController : MonoBehaviour {
 			print ("Not unlocked");
 		}
 	}
+
+	public void OptionsMenu (bool toOptions) {
+		if (toOptions) {
+			menuElements.SetActive (false);
+			pauseElements.SetActive (true);
+		} else {
+			menuElements.SetActive (true);
+			pauseElements.SetActive (false);
+		}
+	}
+
+	public void unlockLevels () {
+		PlayerPrefs.SetInt ("levelNum", 20);
+	}
+
 }
