@@ -13,6 +13,7 @@ public class LevelEnd : MonoBehaviour {
 		if (coll.tag == "Player") {
 			dataCont.GetComponent<DataController> ().LevelComplete (levelNumber);
 			victoryText.SetActive (true);
+			Destroy(GameObject.FindGameObjectWithTag ("Music"));
 		}
 	}
 		
