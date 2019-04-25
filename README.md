@@ -1,4 +1,4 @@
-# GT-Project-Platformer
+# Slime-Climb-Platformer
 _______________________
 
-Put your questions or ideas and stuff here when you make a new commit.
+A small game made using Unity for a school project.
